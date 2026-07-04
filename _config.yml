@@ -4,7 +4,7 @@ description: >-
   Official team site for the So Cal Athletics James/Brown 28 Premier 16U
   travel softball team — roster, player profiles, and tournament schedules.
 baseurl: "" # update to "/your-repo-name" if publishing to a project page rather than a user/org site
-url: "https://Jeff-Carver-Personal/SoCal-James-Brown-2028" 
+url: "https://Jeff-Carver-Personal.github.io/SoCal-James-Brown-2028" 
 
 # Team info (edit these any time — they flow through to the site)
 team:
