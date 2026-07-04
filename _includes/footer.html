@@ -1,0 +1,14 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div>{{ site.team.name }} &middot; {{ site.team.age_division }} Travel Softball</div>
+    {% if site.team.contact_email != "" %}
+    <div style="margin-top:6px;"><a href="mailto:{{ site.team.contact_email }}">{{ site.team.contact_email }}</a></div>
+    {% endif %}
+    <div class="footer-social">
+      {% if site.team.facebook %}<span>Facebook: {{ site.team.facebook }}</span>{% endif %}
+      {% if site.team.gamechanger %}<span>GameChanger: {{ site.team.gamechanger }}</span>{% endif %}
+      {% if site.team.instagram %}<span>Instagram: @{{ site.team.instagram }}</span>{% endif %}
+      {% if site.team.x %}<span>X: @{{ site.team.x }}</span>{% endif %}
+    </div>
+  </div>
+</footer>

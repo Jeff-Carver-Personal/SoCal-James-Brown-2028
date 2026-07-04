@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+</head>
+<body>
+{% include header.html %}
+<main>
+
+<section class="player-hero">
+  <div class="wrap">
+    <div class="photo">
+      {% if page.photo %}
+        <img src="{{ page.photo | relative_url }}" alt="{{ page.name }}">
+      {% else %}
+        <div class="placeholder">{{ page.number }}</div>
+      {% endif %}
+    </div>
+    <div class="name-block">
+      <div class="eyebrow">Class of {{ page.grad_year }} &middot; #{{ page.number }}</div>
+      <h1>{{ page.name }}</h1>
+      <div class="subline">{{ page.position }} &middot; B/T: {{ page.bt }}{% if page.hometown %} &middot; {{ page.hometown }}{% endif %}</div>
+      <div class="badges">
+        <span class="pennant">#{{ page.number }}</span>
+      </div>
+      {% if page.x_handle or page.insta_handle %}
+      <div class="social-row">
+        {% if page.x_handle %}<a href="https://x.com/{{ page.x_handle }}" target="_blank" rel="noopener">X: @{{ page.x_handle }}</a>{% endif %}
+        {% if page.insta_handle %}<a href="https://instagram.com/{{ page.insta_handle }}" target="_blank" rel="noopener">Insta: @{{ page.insta_handle }}</a>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="profile-body">
+  <div class="wrap">
+    <a class="back-link" href="{{ '/roster/' | relative_url }}">&larr; Back to full roster</a>
+
+    <div class="profile-grid">
+      <div class="panel">
+        <h2>Academic Information</h2>
+        <dl class="kv">
+          {% if page.high_school %}<dt>School</dt><dd>{{ page.high_school }}</dd>{% endif %}
+          {% if page.gpa %}<dt>GPA</dt><dd>{{ page.gpa }}</dd>{% endif %}
+          {% if page.study_area %}<dt>Interest</dt><dd>{{ page.study_area }}</dd>{% endif %}
+        </dl>
+      </div>
+
+      <div class="panel">
+        <h2>Softball Information</h2>
+        <dl class="kv">
+          <dt>Position</dt><dd>{{ page.position }}</dd>
+          <dt>B/T</dt><dd>{{ page.bt }}</dd>
+          <dt>Travel Team</dt><dd>{{ site.team.name }} &mdash; Jersey #{{ page.number }}</dd>
+          {% if page.high_school_team %}<dt>High School</dt><dd>{{ page.high_school_team }}</dd>{% endif %}
+        </dl>
+
+        {% if page.measurables %}
+        <div class="measurables">
+          {% for m in page.measurables %}
+          <div class="m">
+            <div class="val">{{ m.value }}</div>
+            <div class="lbl">{{ m.label }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+
+      {% if page.honors %}
+      <div class="panel">
+        <h2>Academic / Athletic Honors</h2>
+        <ul class="honors-list">
+          {% for h in page.honors %}<li>{{ h }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% assign trimmed_content = content | strip_html | strip %}
+      {% if trimmed_content != "" %}
+      <div class="panel">
+        <h2>About</h2>
+        {{ content }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+</main>
+{% include footer.html %}
+</body>
+</html>
