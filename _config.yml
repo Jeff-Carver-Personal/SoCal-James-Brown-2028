@@ -1,0 +1,52 @@
+title: So Cal Athletics James/Brown 28 Premier
+tagline: 16U Travel Softball
+description: >-
+  Official team site for the So Cal Athletics James/Brown 28 Premier 16U
+  travel softball team — roster, player profiles, and tournament schedules.
+baseurl: "" # update to "/your-repo-name" if publishing to a project page rather than a user/org site
+url: "" # update to your GitHub Pages URL, e.g. https://yourusername.github.io
+
+# Team info (edit these any time — they flow through to the site)
+team:
+  name: "So Cal Athletics James/Brown 28 Premier"
+  short_name: "SoCal Athletics 28 Premier"
+  age_division: "16U"
+  head_coach: "Jeremy Brown"
+  head_coach_phone: "(205) 585-4727"
+  assistant_coach: "Dusty Cummings"
+  assistant_coach_phone: "(205) 531-3331"
+  recruiting_coordinator: "Barb Sherwood"
+  recruiting_coordinator_phone: "(843) 323-1022"
+  facebook: "SoCal Athletics 2028 Premier - Brown"
+  gamechanger: "SoCal Athletics 2028 Premier - Brown"
+  instagram: "socal_athletics_2028"
+  x: "socalath2028"
+  contact_email: "" # add a team contact email here if you'd like one shown on the site
+
+collections:
+  players:
+    output: true
+    permalink: /roster/:path/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "players"
+    values:
+      layout: "player"
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
