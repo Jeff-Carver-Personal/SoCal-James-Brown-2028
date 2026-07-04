@@ -2,25 +2,25 @@
 layout: default
 title: Home
 ---
-<section class="hero">
-  <img class="hero-photo" src="{{ '/assets/images/team-photo.jpg' | relative_url }}" alt="So Cal Athletics James/Brown 28 Premier team photo">
-  <div class="hero-scrim"></div>
-  <div class="hero-content wrap">
+<section class="team-intro">
+  <div class="banner-text">
     <div class="eyebrow">{{ site.team.age_division }} Travel Softball &middot; Est. Roster</div>
-    <h1 class="hero-title">{{ site.team.name }}</h1>
-    <div class="hero-sub">Building on every rep, every rotation, every road trip.</div>
-    <div class="hero-actions">
-      <a class="btn solid" href="{{ '/roster/' | relative_url }}">Meet the Team</a>
-      <a class="btn" href="{{ '/schedule/' | relative_url }}">Tournament Schedule</a>
-    </div>
+    <h1 class="banner-title">{{ site.team.name }}</h1>
+    <div class="banner-tagline">Building on every rep, every rotation, every road trip.</div>
+  </div>
+  <div class="team-photo-wrap">
+    <img src="{{ '/assets/images/team-photo.jpg' | relative_url }}" alt="So Cal Athletics James/Brown 28 Premier team photo">
+  </div>
+  <div class="hero-actions">
+    <a class="btn solid" href="{{ '/roster/' | relative_url }}">Meet the Team</a>
+    <a class="btn" href="{{ '/schedule/' | relative_url }}">Tournament Schedule</a>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">About the Team</div>
-      <h2>Who We Are</h2>
+      <h2 style="font-size: clamp(2rem, 4vw, 3rem);">About the Team</h2>
       <p>
         So Cal Athletics James/Brown 28 Premier is a {{ site.team.age_division }} travel softball team
         built around fundamentals, competition, and college exposure. The team travels to
@@ -48,7 +48,6 @@ title: Home
 <section class="section dark">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Leadership</div>
       <h2>Coaching Staff</h2>
     </div>
     <div class="coach-grid">
