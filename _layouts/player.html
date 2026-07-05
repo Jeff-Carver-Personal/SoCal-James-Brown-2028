@@ -75,16 +75,6 @@
 
     <div class="profile-grid">
       <div class="panel">
-        <h2>Academic Information</h2>
-        <dl class="kv">
-          {% if page.high_school %}<dt>School</dt><dd>{{ page.high_school }}</dd>{% endif %}
-          {% if page.gpa %}<dt>GPA</dt><dd>{{ page.gpa }}</dd>{% endif %}
-          {% if page.test_scores %}<dt>Scores</dt><dd>{{ page.test_scores }}</dd>{% endif %}
-          {% if page.study_area %}<dt>Interest</dt><dd>{{ page.study_area }}</dd>{% endif %}
-        </dl>
-      </div>
-
-      <div class="panel">
         <h2>Softball Information</h2>
         <dl class="kv">
           <dt>Position</dt><dd>{{ page.position_primary }}{% if page.position_secondary %} / {{ page.position_secondary }}{% endif %}</dd>
@@ -125,6 +115,16 @@
         </ul>
       </div>
       {% endif %}
+
+      <div class="panel">
+        <h2>Academic Information</h2>
+        <dl class="kv">
+          {% if page.high_school %}<dt>School</dt><dd>{{ page.high_school }}</dd>{% endif %}
+          {% if page.gpa %}<dt>GPA</dt><dd>{{ page.gpa }}</dd>{% endif %}
+          {% if page.test_scores %}<dt>Scores</dt><dd>{{ page.test_scores }}</dd>{% endif %}
+          {% if page.study_area %}<dt>Interest</dt><dd>{{ page.study_area }}</dd>{% endif %}
+        </dl>
+      </div>
 
       <div class="panel catch-play-panel">
         <h2>Catch Her Play</h2>
