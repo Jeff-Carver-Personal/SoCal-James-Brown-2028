@@ -4,7 +4,7 @@ number: 8
 grad_year: 2028
 hometown: "Hoover, AL"
 high_school: "Hoover High School"
-high_school_team: "Hoover High School Softball"
+high_school_team: "Hoover High School"
 gpa: "4.00"
 study_area: "Business / Accounting"
 position_primary: "SS"
