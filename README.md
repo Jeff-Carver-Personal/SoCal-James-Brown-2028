@@ -48,12 +48,27 @@ grad_year: 2028
 hometown: "City, ST"
 high_school: "High School Name"
 gpa: "4.00"
-position: "Primary Pos/Secondary Pos"
+position_primary: "SS"
+position_secondary: "2B/3B"
 bt: "R/R"
 photo:              # leave blank, or set to /assets/images/players/filename.jpg
 x_handle: ""        # X (Twitter) username, no @
 insta_handle: ""    # Instagram username, no @
+
+height:             # e.g. "5'7""
+committed_to:       # e.g. "University of Alabama" -- leave blank until she commits
+video_url:          # a YouTube link -- it will embed and play right on the page
+test_scores:        # e.g. "ACT: 28"
+study_area:         # e.g. "Nursing"
+high_school_team:   # e.g. "Hillcrest High School Softball"
 ```
+
+Below the second `---`, write a few sentences in the player's own voice —
+what she loves about the game, what kind of teammate she is, what she's
+looking for in a college program. College coaches specifically look for this
+kind of personal statement, and it shows up in an "About Me" section near the
+top of her page. Leave it blank (or leave the HTML comment as-is) to hide
+that section entirely.
 
 To add a photo, drop the image file into `assets/images/players/` and set
 `photo: "/assets/images/players/filename.jpg"` in that player's file. Square
@@ -61,12 +76,18 @@ or portrait (4:5) photos work best.
 
 Optional fields you can add to any player, copying the format from
 `_players/claire-carver.md`:
-- `study_area`, `high_school_team`
-- `measurables:` (a list of label/value pairs — velocity, times, etc.)
+- `measurables:` (a list of label/value pairs — velocity, times, pop time, etc.)
+- `stats:` (a list of label/value pairs — batting average, ERA, OBP, etc. —
+  same format as `measurables`, shown right alongside them)
 - `honors:` (a bullet list of awards)
 
-You can also write freeform text below the second `---` in any player file —
-it will appear in an "About" section on that player's page.
+### About the highlight video field
+Paste a normal YouTube link (`https://www.youtube.com/watch?v=...` or
+`https://youtu.be/...`) into `video_url` and it will embed as a playable
+video directly on her page — this is one of the single biggest things
+college coaches say makes a recruiting profile stand out. If you use Hudl or
+another host instead, paste that link in and it'll show as a "Watch Highlight
+Video" button instead of an embed.
 
 ### Update team/coach info
 Edit the `team:` section at the top of `_config.yml` — coach names, phone
