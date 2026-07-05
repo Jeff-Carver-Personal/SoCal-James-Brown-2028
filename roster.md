@@ -6,7 +6,7 @@ permalink: /roster/
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">{{ site.team.age_division }} Roster</div>
+      <div class="eyebrow">Roster</div>
       <h2>{{ site.team.name }}</h2>
       <p>Tap any player to view her full profile, including academics, position, and measurables.</p>
     </div>
