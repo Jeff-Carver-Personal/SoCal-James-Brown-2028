@@ -106,3 +106,4 @@ numbers, personal emails, and NCAA ID numbers, since this is a public website
 that search engines and bots can crawl. If you want to share a full detailed
 recruiting packet with a specific college coach, that's best done as a private
 PDF or email rather than adding those fields to the public site.
+
