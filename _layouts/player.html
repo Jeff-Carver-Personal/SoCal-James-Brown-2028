@@ -17,7 +17,7 @@
       {% endif %}
     </div>
     <div class="name-block">
-      <div class="eyebrow">Class of {{ page.grad_year }} &middot; #{{ page.number }}</div>
+      <div class="eyebrow">Class of {{ page.grad_year }}/div>
       <h1>{{ page.name }}</h1>
       <div class="subline">
         {{ page.position_primary }}{% if page.position_secondary %} &middot; {{ page.position_secondary }}{% endif %}
@@ -79,8 +79,6 @@
         <dl class="kv">
           <dt>Position</dt><dd>{{ page.position_primary }}{% if page.position_secondary %} / {{ page.position_secondary }}{% endif %}</dd>
           <dt>B/T</dt><dd>{{ page.bt }}</dd>
-          {% if page.height %}<dt>Height</dt><dd>{{ page.height }}</dd>{% endif %}
-          <dt>Travel Team</dt><dd>{{ site.team.name }} &mdash; Jersey #{{ page.number }}</dd>
           {% if page.high_school_team %}<dt>High School</dt><dd>{{ page.high_school_team }}</dd>{% endif %}
         </dl>
 
