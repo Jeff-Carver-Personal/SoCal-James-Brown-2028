@@ -19,9 +19,13 @@
     <div class="name-block">
       <div class="eyebrow">Class of {{ page.grad_year }} &middot; #{{ page.number }}</div>
       <h1>{{ page.name }}</h1>
-      <div class="subline">{{ page.position }} &middot; B/T: {{ page.bt }}{% if page.hometown %} &middot; {{ page.hometown }}{% endif %}</div>
+      <div class="subline">
+        {{ page.position_primary }}{% if page.position_secondary %} &middot; {{ page.position_secondary }}{% endif %}
+        &middot; B/T: {{ page.bt }}{% if page.height %} &middot; {{ page.height }}{% endif %}{% if page.hometown %} &middot; {{ page.hometown }}{% endif %}
+      </div>
       <div class="badges">
         <span class="pennant">#{{ page.number }}</span>
+        {% if page.committed_to %}<span class="pennant committed">Committed: {{ page.committed_to }}</span>{% endif %}
       </div>
       {% if page.x_handle or page.insta_handle %}
       <div class="social-row">
@@ -37,12 +41,41 @@
   <div class="wrap">
     <a class="back-link" href="{{ '/roster/' | relative_url }}">&larr; Back to full roster</a>
 
+    {% assign trimmed_content = content | strip_html | strip %}
+    {% if trimmed_content != "" %}
+    <div class="panel about-panel">
+      <h2>About Me</h2>
+      {{ content }}
+    </div>
+    {% endif %}
+
+    {% if page.video_url %}
+      {% assign vid = page.video_url %}
+      {% assign vid_id = "" %}
+      {% if vid contains "youtu.be/" %}
+        {% assign vid_id = vid | split: "youtu.be/" | last | split: "?" | first %}
+      {% elsif vid contains "watch?v=" %}
+        {% assign vid_id = vid | split: "v=" | last | split: "&" | first %}
+      {% endif %}
+      <div class="panel video-panel">
+        <h2>Highlight Video</h2>
+        {% if vid_id != "" %}
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/{{ vid_id }}" title="{{ page.name }} highlight video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+        {% else %}
+          <a class="btn-video" href="{{ vid }}" target="_blank" rel="noopener">&#9654; Watch Highlight Video</a>
+        {% endif %}
+      </div>
+    {% endif %}
+
     <div class="profile-grid">
       <div class="panel">
         <h2>Academic Information</h2>
         <dl class="kv">
           {% if page.high_school %}<dt>School</dt><dd>{{ page.high_school }}</dd>{% endif %}
           {% if page.gpa %}<dt>GPA</dt><dd>{{ page.gpa }}</dd>{% endif %}
+          {% if page.test_scores %}<dt>Scores</dt><dd>{{ page.test_scores }}</dd>{% endif %}
           {% if page.study_area %}<dt>Interest</dt><dd>{{ page.study_area }}</dd>{% endif %}
         </dl>
       </div>
@@ -50,8 +83,9 @@
       <div class="panel">
         <h2>Softball Information</h2>
         <dl class="kv">
-          <dt>Position</dt><dd>{{ page.position }}</dd>
+          <dt>Position</dt><dd>{{ page.position_primary }}{% if page.position_secondary %} / {{ page.position_secondary }}{% endif %}</dd>
           <dt>B/T</dt><dd>{{ page.bt }}</dd>
+          {% if page.height %}<dt>Height</dt><dd>{{ page.height }}</dd>{% endif %}
           <dt>Travel Team</dt><dd>{{ site.team.name }} &mdash; Jersey #{{ page.number }}</dd>
           {% if page.high_school_team %}<dt>High School</dt><dd>{{ page.high_school_team }}</dd>{% endif %}
         </dl>
@@ -62,6 +96,17 @@
           <div class="m">
             <div class="val">{{ m.value }}</div>
             <div class="lbl">{{ m.label }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if page.stats %}
+        <div class="measurables stats-row">
+          {% for s in page.stats %}
+          <div class="m">
+            <div class="val">{{ s.value }}</div>
+            <div class="lbl">{{ s.label }}</div>
           </div>
           {% endfor %}
         </div>
@@ -77,13 +122,11 @@
       </div>
       {% endif %}
 
-      {% assign trimmed_content = content | strip_html | strip %}
-      {% if trimmed_content != "" %}
-      <div class="panel">
-        <h2>About</h2>
-        {{ content }}
+      <div class="panel catch-play-panel">
+        <h2>Catch Her Play</h2>
+        <p>See the full tournament schedule for upcoming games and locations.</p>
+        <a class="btn-inline" href="{{ '/schedule/' | relative_url }}">View Team Schedule &rarr;</a>
       </div>
-      {% endif %}
     </div>
   </div>
 </section>
