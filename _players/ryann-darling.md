@@ -8,7 +8,7 @@ gpa: "4.00"
 position_primary: "MIF"
 position_secondary: "UTL"
 bt: "R/R"
-photo:
+photo: "/assets/images/players/ryann-darling.jpg"
 x_handle: "Ryann_d219"
 insta_handle: "Ryann_d219"
 

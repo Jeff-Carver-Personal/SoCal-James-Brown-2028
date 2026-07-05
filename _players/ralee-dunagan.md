@@ -8,7 +8,7 @@ gpa: "4.00"
 position_primary: "UTL"
 position_secondary: ""
 bt: "R/R"
-photo:
+photo: "/assets/images/players/ralee-dunagan.jpg"
 x_handle: "raleedunagan"
 insta_handle: "ralee.dunagan"
 

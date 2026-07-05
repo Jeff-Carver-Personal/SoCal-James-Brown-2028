@@ -8,7 +8,7 @@ gpa: "3.54"
 position_primary: "C"
 position_secondary: "UT"
 bt: "R/R"
-photo:
+photo: "/assets/images/players/gracie-shepherd.jpg"
 x_handle: "GracieShep22"
 insta_handle: "just_gracie.mae"
 

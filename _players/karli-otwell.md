@@ -8,7 +8,7 @@ gpa: "3.97"
 position_primary: "C"
 position_secondary: "UTL"
 bt: "R/R"
-photo:
+photo: "/assets/images/players/karli-otwell.jpg"
 x_handle: "KarliOtwell2028"
 insta_handle: "karli.otwell"
 

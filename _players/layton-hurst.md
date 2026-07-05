@@ -8,7 +8,7 @@ gpa: "3.90"
 position_primary: "IF"
 position_secondary: "UTL"
 bt: "R/R"
-photo:
+photo: "/assets/images/players/layton-hurst.jpg"
 x_handle: "lhurst2210"
 insta_handle: "lhurst2210"
 

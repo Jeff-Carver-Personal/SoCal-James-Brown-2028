@@ -8,7 +8,7 @@ gpa: "3.84"
 position_primary: "1B"
 position_secondary: ""
 bt: "L/L"
-photo:
+photo: "/assets/images/players/caroline-matlock.jpg"
 x_handle: "cmatlock33_"
 insta_handle: "caroline_matlock11"
 
