@@ -8,7 +8,7 @@ gpa: "3.67"
 position_primary: "RHP"
 position_secondary: "MIF"
 bt: "R/R"
-photo:
+photo: "/assets/images/players/ella-farley.jpg"
 x_handle: "FarleyElla3"
 insta_handle: "ellab_farley"
 

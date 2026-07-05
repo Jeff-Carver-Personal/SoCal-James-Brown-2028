@@ -8,7 +8,7 @@ gpa: "3.70"
 position_primary: "1B"
 position_secondary: "RHP"
 bt: "R/R"
-photo:
+photo: "/assets/images/players/ella-brown.jpg"
 x_handle: "EllaBrown1415"
 insta_handle: "ellabrown.14"
 

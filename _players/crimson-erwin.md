@@ -1,16 +1,16 @@
 ---
-name: "Hallie Kelly"
-number: 1
-grad_year: 2029
-hometown: "Indian Springs, AL"
-high_school: "Oak Mountain High School"
-gpa: "4.00"
+name: "Crimson Erwin"
+number: 11
+grad_year: 2028
+hometown: "Warrior, AL"
+high_school: "Corner High School"
+gpa: "4.17"
 position_primary: "MIF"
 position_secondary: "UTL"
 bt: "R/R"
-photo: "/assets/images/players/hallie-kelly.jpg"
-x_handle: "hallie1085802"
-insta_handle: "halliegkelly1"
+photo: "/assets/images/players/crimson-erwin.jpg"
+x_handle: "CrimsonErwin1"
+insta_handle: "crimson_erwin1"
 
 # --- Optional fields: fill these in any time, or leave blank ---
 height:            # e.g. "5'7\""

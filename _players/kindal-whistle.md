@@ -8,7 +8,7 @@ gpa: "3.88"
 position_primary: "RHP"
 position_secondary: "3B"
 bt: "R/R"
-photo:
+photo: "/assets/images/players/kindal-whistle.jpg"
 x_handle: "Kwhistle_2028"
 insta_handle: "Kwhistle_2028"
 

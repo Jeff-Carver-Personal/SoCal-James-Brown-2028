@@ -8,7 +8,7 @@ gpa: "4.46"
 position_primary: "RHP"
 position_secondary: "UTL"
 bt: "R/R"
-photo:
+photo: "/assets/images/players/larsen-cummings.jpg"
 x_handle: "larsenbcummings"
 insta_handle: "larsen.cummings"
 
