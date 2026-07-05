@@ -27,10 +27,11 @@
         <span class="pennant">#{{ page.number }}</span>
         {% if page.committed_to %}<span class="pennant committed">Committed: {{ page.committed_to }}</span>{% endif %}
       </div>
-      {% if page.x_handle or page.insta_handle %}
+      {% if page.x_handle or page.insta_handle or page.youtube_channel_url %}
       <div class="social-row">
         {% if page.x_handle %}<a href="https://x.com/{{ page.x_handle }}" target="_blank" rel="noopener">X: @{{ page.x_handle }}</a>{% endif %}
         {% if page.insta_handle %}<a href="https://instagram.com/{{ page.insta_handle }}" target="_blank" rel="noopener">Insta: @{{ page.insta_handle }}</a>{% endif %}
+        {% if page.youtube_channel_url %}<a href="{{ page.youtube_channel_url }}" target="_blank" rel="noopener">YouTube Channel</a>{% endif %}
       </div>
       {% endif %}
     </div>
@@ -49,7 +50,7 @@
     </div>
     {% endif %}
 
-    {% if page.video_url %}
+    {% if page.video_url or page.youtube_channel_url %}
       {% assign vid = page.video_url %}
       {% assign vid_id = "" %}
       {% if vid contains "youtu.be/" %}
@@ -63,8 +64,11 @@
           <div class="video-wrap">
             <iframe src="https://www.youtube.com/embed/{{ vid_id }}" title="{{ page.name }} highlight video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
-        {% else %}
+        {% elsif vid != nil and vid != "" %}
           <a class="btn-video" href="{{ vid }}" target="_blank" rel="noopener">&#9654; Watch Highlight Video</a>
+        {% endif %}
+        {% if page.youtube_channel_url %}
+          <a class="channel-link" href="{{ page.youtube_channel_url }}" target="_blank" rel="noopener">See more videos on her YouTube channel &rarr;</a>
         {% endif %}
       </div>
     {% endif %}
