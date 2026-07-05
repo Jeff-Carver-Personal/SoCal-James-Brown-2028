@@ -509,6 +509,15 @@ nav.main-nav a.active {
 }
 .btn-video:hover { background: var(--clay-bright); color: var(--paper); }
 
+.channel-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--clay);
+}
+.channel-link:hover { color: var(--clay-bright); }
+
 .catch-play-panel p { color: var(--ink-soft); font-size: 0.92rem; margin-bottom: 14px; }
 .btn-inline {
   display: inline-block;
