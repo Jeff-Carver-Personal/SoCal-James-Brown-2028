@@ -4,7 +4,6 @@ title: Home
 ---
 <section class="team-intro">
   <div class="banner-text">
-    <div class="eyebrow">{{ site.team.age_division }} Travel Softball &middot; Est. Roster</div>
     <h1 class="banner-title">{{ site.team.name }}</h1>
     <div class="banner-tagline">Building on every rep, every rotation, every road trip.</div>
   </div>
@@ -27,20 +26,6 @@ title: Home
         showcases and tournaments throughout the season, competing against top programs from
         across the region.
       </p>
-    </div>
-    <div class="about-grid">
-      <div class="stat-card">
-        <div class="num">{{ site.players | size }}</div>
-        <div class="label">Players on Roster</div>
-      </div>
-      <div class="stat-card">
-        <div class="num">{{ site.team.age_division }}</div>
-        <div class="label">Age Division</div>
-      </div>
-      <div class="stat-card">
-        <div class="num">2028</div>
-        <div class="label">Primary Grad Class</div>
-      </div>
     </div>
   </div>
 </section>
