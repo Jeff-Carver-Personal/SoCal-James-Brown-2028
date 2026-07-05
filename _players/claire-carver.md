@@ -17,8 +17,8 @@ insta_handle: "clairecarver28"
 # --- Optional fields: fill these in any time, or leave blank ---
 height:            # e.g. "5'7""
 committed_to:      # e.g. "University of Alabama"
-video_url:         # YouTube link (embeds automatically) or Hudl link
-youtube_channel_url: # e.g. "https://www.youtube.com/@HerChannelName"
+video_url:         "https://youtu.be/bRgv2L-ypIs?si=24UBE1bd03uR9gSH"
+youtube_channel_url: "https://www.youtube.com/@ClaireCarverSoftball-hy7oe"
 test_scores:       # e.g. "ACT: 28"
 
 measurables:
