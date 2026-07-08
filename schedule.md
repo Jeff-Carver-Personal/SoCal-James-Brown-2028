@@ -26,7 +26,7 @@ permalink: /schedule/
         </div>
         <div class="card-body">
           <h3>{{ t.name }}</h3>
-          <div class="dates">{{ t.dates }}</div>
+          {% if t.dates %}<div class="dates">{{ t.dates }}</div>{% endif %}
           <div class="loc">
             {{ t.location_name }}
             {% if t.address %}<span class="addr">{{ t.address }}</span>{% endif %}

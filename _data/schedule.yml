@@ -3,7 +3,21 @@
 # To add a logo, drop the image into assets/images/tournaments/ and set
 # logo to its path, e.g. "/assets/images/tournaments/atlanta-legacy.jpg".
 
-- name: "Atlanta Legacy Showcase"
+- name: "Show Me The Money"
+  dates:
+  location_name: "Newberry, FL"
+  address:
+  logo:
+  link:
+
+- name: "Top Gun Invitational"
+  dates:
+  location_name: "Kansas City"
+  address:
+  logo:
+  link:
+
+- name: "Atlanta Legacy"
   dates: "July 9-11, 2026"
   location_name: "Patriots Park"
   address: "1485 Kellogg Creek Rd, Acworth, GA 30102"
