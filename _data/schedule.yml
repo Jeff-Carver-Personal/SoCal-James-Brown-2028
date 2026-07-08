@@ -4,29 +4,29 @@
 # logo to its path, e.g. "/assets/images/tournaments/atlanta-legacy.jpg".
 
 - name: "Show Me The Money"
-  dates:
-  location_name: "Newberry, FL"
-  address:
-  logo:
-  link:
+  dates: "June 5-8, 2026"
+  location_name: "Champions Park"
+  address: "24617 SW 30th Avenue, Newberry, FL 32669"
+  logo: "/assets/images/tournaments/show-me-the-money.jpg"
+  link: "https://www.gainesvillesportscommission.com/events/pgf-show-me-the-money-9/"
 
 - name: "Top Gun Invitational"
-  dates:
-  location_name: "Kansas City"
+  dates: "June 11-14, 2026"
+  location_name: "Kansas City, MO"
   address:
-  logo:
-  link:
+  logo: "/assets/images/tournaments/top-gun-invitational.png"
+  link: "https://topgunevents.com/"
 
 - name: "Atlanta Legacy"
-  dates: "July 9-11, 2026"
+  dates: "July 9-12, 2026"
   location_name: "Patriots Park"
   address: "1485 Kellogg Creek Rd, Acworth, GA 30102"
-  logo:
-  link:
+  logo: "/assets/images/tournaments/atlanta-legacy.png"
+  link: "https://www.triplecrownfastpitch.com/events/atlanta-legacy-showcase"
 
 - name: "AFON"
-  dates:
+  dates: "July 21-26, 2026"
   location_name: "Chattanooga, TN"
   address:
-  logo:
-  link:
+  logo: "/assets/images/tournaments/afon.png"
+  link: "https://allianceopennationals.com/"
