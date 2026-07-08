@@ -7,36 +7,34 @@ permalink: /schedule/
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">{{ site.team.age_division }} Schedule</div>
-      <h2>Tournaments &amp; Showcases</h2>
+      <h2>Summer 2026 Tournaments</h2>
       <p>
-        Game times and fields are subject to change based on tournament brackets and weather.
-        Check back for updates, or follow the team on GameChanger for live scoring.
+        Tournaments the team has played in and will play in this summer.
+        Follow along on GameChanger for live scoring and results.
       </p>
     </div>
 
-    {% for t in site.data.schedule %}
-    <div class="tournament">
-      <div class="tournament-head">
-        <h2>{{ t.name }}</h2>
-        <div class="loc">{{ t.location_name }}{% if t.address %} &middot; {{ t.address }}{% endif %}</div>
-        <div class="dates">{{ t.dates }}</div>
-      </div>
-      <div class="game-list">
-        {% for g in t.games %}
-        <div class="game-row">
-          <div class="when">
-            <span class="d">{{ g.date }}</span>
-            <span class="t">{{ g.time }}</span>
-          </div>
-          <div>
-            <div class="opp">{{ g.opponent }}</div>
-            {% if g.field %}<span class="field">{{ g.field }}</span>{% endif %}
-          </div>
-          <div class="result">{{ g.result }}</div>
+    <div class="tournament-grid">
+      {% for t in site.data.schedule %}
+      <div class="tournament-card">
+        <div class="logo-wrap">
+          {% if t.logo %}
+            <img src="{{ t.logo | relative_url }}" alt="{{ t.name }} logo">
+          {% else %}
+            <div class="placeholder">{{ t.name }}</div>
+          {% endif %}
         </div>
-        {% endfor %}
+        <div class="card-body">
+          <h3>{{ t.name }}</h3>
+          {% if t.dates %}<div class="dates">{{ t.dates }}</div>{% endif %}
+          <div class="loc">
+            {{ t.location_name }}
+            {% if t.address %}<span class="addr">{{ t.address }}</span>{% endif %}
+          </div>
+          {% if t.link %}<a class="site-link" href="{{ t.link }}" target="_blank" rel="noopener">Tournament Website &rarr;</a>{% endif %}
+        </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>

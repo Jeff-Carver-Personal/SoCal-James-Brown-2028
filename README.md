@@ -29,11 +29,14 @@ Then open `http://localhost:4000` in a browser.
 
 ## How to update things
 
-### Add or edit a game / tournament
-Edit `_data/schedule.yml`. Copy an existing tournament block (starting with
-`- name:`) to add a new one, or add a new game under `games:` in an existing
-tournament. Fill in `result:` (e.g. `"W 8-2"`) once a game is played and it
-will show automatically.
+### Add or edit a tournament
+Edit `_data/schedule.yml`. Copy an existing block (starting with `- name:`)
+to add a new tournament, and fill in `name`, `dates`, `location_name`, and
+optionally `address` and `link` (a tournament website URL).
+
+To add a logo, drop the image into `assets/images/tournaments/` and set
+`logo: "/assets/images/tournaments/filename.jpg"` on that tournament. Leave
+`logo` blank to show the tournament name as a placeholder instead.
 
 ### Add or edit a player
 Each player is one file in `_players/`. Copy an existing file (e.g.
